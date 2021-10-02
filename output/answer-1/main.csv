@@ -1,0 +1,5 @@
+import datas as dt 
+ds =dt.read_csv("firstanswer/input/question-1/main.csv")
+ds.drop('total' , axis='column', inplace=True) 
+c=ds.group((ds.index.Year//10)*10).sum()
+c
